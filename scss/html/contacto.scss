@@ -1,0 +1,304 @@
+/* estilos para contacto  */
+
+/* formato mobile  */
+
+.headerInicio {
+    @include headerIniciomobile;
+
+    h1 {
+        @include titulo;
+    }
+
+    .navbar {
+        .containerFluid {
+            .navbar-toggler {
+                background-color: orange;
+            }
+
+            #navbarNav {
+                .padreUl {
+                    @include ulmobile;
+
+                    li {
+                        @include limobile;
+                    }
+                }
+            }
+        }
+    }
+
+    .segundoUl {
+        display: none;
+    }
+}
+
+.sectionContacto {
+    @include sectionContacto;
+
+    h2 {
+        @include h2contacto;
+    }
+}
+
+.contactoMain {
+    .contactoUno {
+        @include contactos;
+
+        img {
+            @include imgcontacto;
+        }
+
+        h3 {
+            @include h3contacto;
+
+            a {
+                @include h3a;
+            }
+        }
+    }
+
+    .contactoDos {
+        @include contactos;
+
+        img {
+            @include imgcontacto;
+        }
+
+        h3 {
+            @include h3contacto;
+
+            a {
+                @include h3a;
+            }
+        }
+    }
+
+    .contactoTres {
+        @include contactos;
+
+        img {
+            @include imgcontacto;
+        }
+
+        h3 {
+            @include h3contacto;
+
+            a {
+                @include h3a;
+            }
+        }
+    }
+
+    .contactoCuatro {
+        @include contactos;
+
+        img {
+            @include imgcontacto;
+        }
+
+        h3 {
+            @include h3contacto;
+
+            a {
+                @include h3a;
+            }
+        }
+    }
+
+    .contactoCinco {
+        @include contactos;
+
+        img {
+            @include imgcontacto;
+        }
+
+        h3 {
+            @include h3contacto;
+
+            a {
+                @include h3a;
+            }
+        }
+    }
+}
+
+/* estilos de contacto */
+/* formato para tablet */
+@media (min-width: 600px) {
+    .sectionContacto {
+        h2 {
+            width: 80%;
+        }
+    }
+}
+
+/* estilos de contacto  */
+/* formato para pc  */
+
+@media (min-width: 1024px) {
+    .sectionContacto {
+        h2 {
+            width: 70%;
+            font-size: 1.5rem;
+        }
+    }
+
+    .contactoMain {
+        @include gridinicio;
+
+        grid-template-areas:
+            " headerInicio headerInicio"
+            "contactoUno contactoDos"
+            "contactoTres contactoCuatro"
+            "contactoCinco contactoCuatro"
+            "footer footer";
+
+        justify-items: center;
+        align-items: center;
+    }
+
+    .headerInicio {
+        grid-area: headerInicio;
+    }
+
+    .contactoMain .contactoUno {
+        grid-area: contactoUno;
+        @include contactospc;
+
+        img {
+            @include contatoimgpc;
+
+            @keyframes imgUno {
+
+                0% {
+                    transform: scale(0.5);
+                }
+
+                50% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        h3:hover {
+            transform: scale(0.9);
+        }
+    }
+
+    .contactoMain .contactoDos {
+        grid-area: contactoDos;
+        @include contactosright;
+
+        img {
+            @include contatoimgpc;
+
+            @keyframes imgDos {
+
+                0% {
+                    transform: scale(0.5);
+                }
+
+                50% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        h3:hover {
+            transform: scale(0.9);
+        }
+    }
+
+    .contactoMain .contactoTres {
+        grid-area: contactoTres;
+        @include contactospc;
+
+        img {
+            @include contatoimgpc;
+
+            @keyframes imgTres {
+
+                0% {
+                    transform: scale(0.5);
+                }
+
+                50% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        h3:hover {
+            transform: scale(0.9);
+        }
+    }
+
+    .contactoMain .contactoCuatro {
+        grid-area: contactoCuatro;
+        @include contactosright;
+
+        img {
+            @include contatoimgpc;
+
+            @keyframes imgCuatro {
+
+                0% {
+                    transform: scale(0.5);
+                }
+
+                50% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+            }
+        }
+    }
+
+    .contactoMain .contactoCinco {
+        grid-area: contactoCinco;
+        @include contactospc;
+
+        img {
+            @include contatoimgpc;
+
+            @keyframes imgCinco {
+
+                0% {
+                    transform: scale(0.5);
+                }
+
+                50% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        h3:hover{
+            transform: scale(0.9);
+        }
+    }
+}

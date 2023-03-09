@@ -1,0 +1,129 @@
+@import "../base/mixin";
+
+
+/* aplicando estilos a ubicacion */
+/* formato mobile  */
+
+.headerInicio {
+    @include headerIniciomobile;
+
+    h1 {
+        @include titulo;
+    }
+
+    .navbar {
+        .containerFluid {
+            .navbar-toggler {
+                background-color: orange;
+            }
+
+            #navbarNav {
+                .padreUl {
+                    @include ulmobile;
+
+                    li {
+                        @include limobile;
+                    }
+                }
+            }
+        }
+    }
+
+    .segundoUl {
+        display: none;
+    }
+}
+
+.ubicacionMain {
+    @include mainubicacion;
+
+    .imagenMapa {
+        width: 25rem;
+        height: 40vh;
+    }
+
+    .ubicacionUno {
+        margin-top: 2rem;
+
+        p {
+            @include ubicacionp;
+        }
+    }
+
+    .ubicacionDos {
+        margin-top: 1rem;
+
+        p {
+            @include ubicacionp;
+        }
+    }
+}
+
+footer {
+    h2 {
+        text-align: center;
+        font-size: medium;
+        padding: 0.5rem;
+    }
+}
+
+/* estilos de ubicacion  */
+/* formato para tablet  */
+@media (min-width: 600px) {}
+
+/* estilos de ubicacion  */
+/* formato para pc */
+
+@media (min-width: 1024px) {
+    .ubicacionMain {
+        @include gridinicio;
+
+        grid-template-areas:
+        "headerInicio headerInicio "
+        " imagenMapa ubicacionUno"
+        "imagenMapa ubicacionDos"
+        "footer footer";
+
+        justify-items: center;
+        align-items: center;
+    }
+
+    .headerInicio{
+        grid-area: headerinicio;
+    }
+
+    .ubicacionMain .imagenMapa{
+        grid-area: imagenMapa;
+        width: 30rem;
+        height: 60vh;
+    }
+
+    .ubicacionMain .ubicacionUno{
+        grid-area: ubicacionUno;
+        p{
+            height: 25vh;
+            width: 30rem;
+            padding: 3.5rem;
+            font-size: large;
+        }
+    }
+
+    .ubicacionMain .ubicacionDos{
+        grid-area: ubicacionDos;
+        margin-bottom: 1.5rem;
+        p{
+            height: 25vh;
+            width: 30rem;
+            padding: 2.5rem;
+            font-size: large;
+        }
+    }
+    
+    footer{
+        grid-area: footer;
+        h2{
+            font-size: large;
+        }
+    }
+
+}

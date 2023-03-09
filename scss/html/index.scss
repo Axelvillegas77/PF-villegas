@@ -1,0 +1,361 @@
+@import "../base/variable";
+
+// estilos generales
+/* reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $color-principal;
+}
+
+// pasando estilos de index con sass
+
+/* aplicando estilos a inicio */
+
+/* formato mobile  */
+
+.headerInicio {
+    @include headerIniciomobile;
+
+    h1 {
+        @include titulo;
+    }
+
+    .navbar {
+        .containerFluid {
+            .navbar-toggler {
+                background-color: orange;
+            }
+
+            #navbarNav {
+                .padreUl {
+                    @include ulmobile;
+
+                    li {
+                        @include limobile;
+                    }
+                }
+            }
+        }
+    }
+
+    .segundoUl {
+        display: none;
+    }
+}
+
+.sectionInicio {
+    @include sectionmobile;
+
+    h2 {
+        @include h2mobile;
+    }
+
+    h3 {
+        @include h3mobile;
+    }
+}
+
+.inicioMain {
+    .padreInicio {
+        @include padreiniciomobile;
+
+        .inicioUno {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgmobile;
+                }
+
+                .card-body {
+                    .card-text {
+                        @include pmobile;
+                    }
+                }
+            }
+
+        }
+
+        .inicioDos {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgdos;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    @include pmobile;
+                }
+            }
+        }
+
+        .inicioTres {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgmobile;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    @include pmobile;
+                }
+            }
+        }
+
+        .inicioCuatro {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgmobile;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    @include pmobile;
+                }
+            }
+        }
+
+        .inicioCinco {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgdos;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    @include pmobile;
+                }
+            }
+        }
+
+        .inicioSeis {
+            .card {
+                @include cardmobile;
+
+                img {
+                    @include imgmobile;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    @include pmobile;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @include footer;
+
+    h4 {
+        @include h4;
+    }
+}
+
+/* estilos de inicio */
+/* formato para tablet */
+@media (min-width: 600px) {}
+
+/* estilos de inicio */
+/* formato para pc */
+
+
+@media (min-width: 1024px) {
+    .headerInicio {
+        @include headerinicio;
+
+        h1 {
+            @include h1;
+        }
+
+        .navbar {
+            .containerFluid {
+                display: none;
+            }
+        }
+
+        nav {
+            .segundoUl {
+                @include segundoul;
+
+                li {
+                    @include li;
+                }
+            }
+
+            .segundoUl li:hover {
+
+                transform: scale(0.9);
+
+            }
+        }
+    }
+
+    .sectionInicio {
+        margin-top: 2rem;
+
+        h2 {
+            width: 60%;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            width: 50%;
+        }
+    }
+
+    .inicioMain {
+        .padreInicio {
+            @include gridinicio;
+
+            grid-template-areas:
+                " headerInicio headerInicio headerInicio "
+                " inicioUno inicioDos inicioTres "
+                "inicioCuatro inicioCinco inicioSeis"
+                "footer footer footer ";
+
+            justify-items: center;
+            align-items: center;
+        }
+
+        .headerInicio {
+            grid-area: headerInicio;
+        }
+
+        .padreInicio .inicioUno {
+            grid-area: inicioUno;
+
+            .card {
+                height: 55vh;
+
+                img {
+                    @include gridimg;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 0.5rem;
+                }
+            }
+
+        }
+
+        .padreInicio .inicioDos {
+            grid-area: inicioDos;
+
+            .card {
+                width: 25rem;
+                height: 55vh;
+
+                img {
+                    @include gridimg;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 1.1rem;
+                }
+            }
+        }
+
+        .padreInicio .inicioTres {
+            grid-area: inicioTres;
+
+            .card {
+                @include gridcard;
+
+                img {
+                    @include gridimg
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        .padreInicio .inicioCuatro {
+            grid-area: inicioCuatro;
+
+            .card {
+                @include gridcard;
+
+                img {
+                    @include gridimg;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        .padreInicio .inicioCinco {
+            grid-area: inicioCinco;
+
+            .card {
+                width: 25rem;
+                height: 55vh;
+
+                img {
+                    @include gridimg;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 1.1rem;
+                }
+            }
+        }
+
+        .padreInicio .inicioSeis {
+            grid-area: inicioSeis;
+
+            .card {
+                @include gridcard;
+
+                img {
+                    @include gridimg;
+                }
+            }
+
+            .card-body {
+                .card-text {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        footer {
+            grid-area: footer;
+            margin: 2rem;
+        }
+    }
+}

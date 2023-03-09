@@ -1,0 +1,113 @@
+/* estilos de nosotros  */
+/* formato para mobile  */
+
+.headerInicio {
+    @include headerIniciomobile;
+
+    h1 {
+        @include titulo;
+    }
+
+    .navbar {
+        .containerFluid {
+            .navbar-toggler {
+                background-color: orange;
+            }
+
+            #navbarNav {
+                .padreUl {
+                    @include ulmobile;
+
+                    li {
+                        @include limobile;
+                    }
+                }
+            }
+        }
+    }
+
+    .segundoUl {
+        display: none;
+    }
+}
+
+.nosotrosMain {
+    @include nosotrosmain;
+
+    .mainImg {
+        width: 70%;
+        height: 40vh;
+    }
+
+    .parrafoUno {
+        @include parrafouno;
+    }
+
+    .imagenDos {
+        width: 70%;
+        height: 30vh;
+    }
+
+    .parrafoDos {
+        @include parrafouno;
+    }
+}
+
+footer {
+    @include footer;
+
+    h4 {
+        @include h4;
+    }
+}
+
+/* estilos para nosotros  */
+/* formato para tablet  */
+@media (min-width: 600px) {}
+
+/* estilos para nosotros  */
+/* formato para pc  */
+@media (min-width: 1024px) {
+    .nosotrosMain {
+        @include nosotrosgrid;
+
+        grid-template-areas:
+            " headerInicio headerInicio"
+            " mainImg parrafoUno"
+            "imagenDos parrafoDos"
+            "footer footer ";
+        
+            justify-items: center;
+            align-items: center;
+    }
+
+    .headerInicio{
+        grid-area: headerInicio;
+    }
+
+    .nosotrosMain .mainImg{
+        grid-area: mainImg;
+        height: 50vh;
+    }
+
+    .nosotrosMain .parrafoUno{
+        grid-area: parrafoUno;
+        height: 50vh;
+        padding: 2rem;
+    }
+
+    .nosotrosMain .imagenDos{
+        grid-area: imagenDos;
+        height: 35vh;
+    }
+
+    .nosotrosMain .parrafoDos{
+        grid-area: parrafoDos;
+        height: 35vh;
+        padding: 4rem;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+}

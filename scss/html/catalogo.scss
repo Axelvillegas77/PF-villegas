@@ -1,0 +1,290 @@
+@import "../base/extend";
+
+/* estilos de catalogo  */
+/* formato mobile para catalogo  */
+
+.headerInicio {
+    @include headerIniciomobile;
+
+    h1 {
+        @include titulo;
+    }
+
+    .navbar {
+        .containerFluid {
+            .navbar-toggler {
+                background-color: orange;
+            }
+
+            #navbarNav {
+                .padreUl {
+                    @include ulmobile;
+
+                    li {
+                        @include limobile;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sectionCatalogo {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    h2 {
+        @include h2catalogo;
+    }
+}
+
+.containerCatalogo {
+    .containerUno {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+
+    .containerDos {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+
+    .containerTres {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+
+    .containerCuatro {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+
+    .containerCinco {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+
+    .containerSeis {
+        @include catalogocontainer;
+
+        img {
+            @extend %img;
+        }
+
+        h3 {
+            @extend %catalogoh3;
+        }
+    }
+}
+
+/* estilos de catalogo */
+/* formato para tablet */
+@media (min-width: 600px) {}
+
+/* estilos de catalogo*/
+/* formato para pc*/
+@media (min-width: 1024px) {
+    .sectionCatalogo {
+        h2 {
+            width: 60%;
+            font-size: 1.5rem;
+        }
+    }
+
+    .catalogoMain {
+        .containerCatalogo {
+            @include gridinicio;
+
+            grid-template-areas:
+                " headerInicio headerInicio headerInicio "
+                " containerUno containerDos containerTres "
+                "containerCuatro containerCinco containerSeis"
+                "footer footer footer ";
+
+            justify-items: center;
+            align-items: center;
+        }
+
+        .headerInicio {
+            grid-area: headerInicio;
+        }
+
+        .containerCatalogo .containerUno {
+            grid-area: containerUno;
+
+            img {
+                @include imgpc;
+            }
+
+            h3 {
+                @include h3pc;
+            }
+        }
+
+        .containerCatalogo .containerDos {
+            grid-area: containerDos;
+
+            img {
+                width: 24rem;
+            }
+
+            h3 {
+                width: 24rem;
+            }
+        }
+
+        .containerCatalogo .containerTres {
+            grid-area: containerTres;
+
+            img {
+                @include imgpc;
+            }
+
+            h3 {
+                @include h3pc;
+            }
+        }
+
+        .containerCatalogo .containerCuatro {
+            grid-area: containerCuatro;
+
+            img {
+                @include imgpc;
+            }
+
+            h3 {
+                @include h3pc;
+            }
+        }
+
+        .containerCatalogo .containerCinco {
+            grid-area: containerCinco;
+
+            img {
+                width: 24rem;
+            }
+
+            h3 {
+               width: 24rem;
+            }
+        }
+
+        .containerCatalogo .containerSeis {
+            grid-area: containerSeis;
+
+            img {
+                @include imgpc;
+            }
+
+            h3 {
+                @include h3pc;
+            }
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+
+
+
+
+
+
+        //     .containerCatalogo {
+        //         @include gridinicio;
+
+        //         grid-area: "headerInicio headerInicio headerInicio"
+        //             "containerUno containerDos containerTres"
+        //             "containerCuatro containerCinco containerSeis"
+        //             "footer footer footer ";
+
+        //         justify-items: center;
+        //         align-items: center;
+        //     }
+
+        //     .headerInicio {
+        //         grid-area: headerInicio;
+        //     }
+
+        //     .containerCatalogo .containerUno {
+        //         grid-area: containerUno;
+
+        //         img {
+        //             @include imgpc;
+        //         }
+
+        //         h3 {
+        //             @include h3pc;
+        //         }
+        //     }
+
+        //     .containerCatalogo .containerDos {
+        //         grid-area: containerUno;
+
+        //         img {
+        //             @include imgpc;
+        //         }
+
+        //         h3 {
+        //             @include h3pc;
+        //         }
+        //     }
+
+        //     .containerCatalogo .containerTres {
+        //         grid-area: containerUno;
+        //     }
+
+        //     .containerCatalogo .containerCuatro {
+        //         grid-area: containerUno;
+        //     }
+
+        //     .containerCatalogo .containerCinco {
+        //         grid-area: containerUno;
+        //     }
+
+        //     .containerCatalogo .containerSeis {
+        //         grid-area: containerUno;
+        //     }
+
+        //     footer {
+        //         grid-area: footer;
+        //     }
+    }
+}

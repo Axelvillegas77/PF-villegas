@@ -1,0 +1,295 @@
+// mixin para inicio mobile
+@mixin headerIniciomobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: 4rem;
+}
+
+@mixin titulo {
+    background-color: orange;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 5px black;
+    height: 10vh;
+}
+
+@mixin ulmobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    height: 25vh;
+}
+
+@mixin limobile {
+    background-color: orange;
+    box-shadow: 2px 2px 3px black;
+    text-align: center;
+    width: 7rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: small;
+}
+
+@mixin sectionmobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin h2mobile {
+    background-color: orange;
+    text-align: center;
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    width: 90%;
+    box-shadow: 4px 4px 5px black;
+}
+
+@mixin h3mobile {
+    background-color: orange;
+    text-align: center;
+    font-size: large;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 3rem;
+    box-shadow: 4px 4px 5px black;
+}
+
+@mixin padreiniciomobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+@mixin cardmobile {
+    background-color: rgb(241, 178, 63);
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    width: 18rem;
+}
+
+@mixin imgmobile {
+    width: 75%;
+    height: 35vh;
+    margin: 0.7rem;
+}
+
+@mixin imgdos {
+    width: 90%;
+    height: 35vh;
+    margin-top: 0.7rem;
+}
+
+@mixin pmobile {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: small;
+    box-shadow: 3px 3px 4px black;
+}
+
+@mixin footer {
+    background-color: orange;
+    margin: 1rem;
+    box-shadow: 4px 4px 5px black;
+    border-radius: 3rem;
+}
+
+@mixin h4 {
+    border-radius: 3rem;
+    font-size: large;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+// mixin para inicio pc
+
+@mixin headerinicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+}
+
+@mixin h1 {
+    padding: 0.5rem;
+    width: 20rem;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+@mixin segundoul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0.5rem;
+    gap: 2rem;
+}
+
+@mixin li {
+    background-color: orange;
+    padding: 1.2rem;
+    border-radius: 3rem;
+    box-shadow: 4px 4px 5px black;
+}
+
+@mixin gridinicio {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+@mixin gridimg {
+    width: 90%;
+    height: 40vh;
+}
+
+@mixin gridcard {
+    width: 18rem;
+    height: 55vh;
+}
+
+// mixin para nosotros
+
+@mixin nosotrosmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+@mixin parrafouno {
+    background-color: orange;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 70%;
+    box-shadow: 4px 4px 5px black;
+}
+
+@mixin nosotrosgrid {
+    margin-left: 3rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+// mixin para catalogos 
+
+@mixin catalogocontainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin h2catalogo {
+    background-color: orange;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 1.2rem;
+    width: 80%;
+    box-shadow: 4px 4px 5px black;
+    font-size: large;
+}
+
+// mixin para catalogo pc
+
+@mixin imgpc {
+    width: 18rem;
+}
+
+@mixin h3pc {
+    width: 18rem;
+}
+
+// mixin para contacto mobile
+
+@mixin sectionContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@mixin h2contacto {
+    background-color: orange;
+    text-align: center;
+    font-size: large;
+    padding: 1rem;
+    box-shadow: 4px 4px 5px black;
+    border-radius: 3rem;
+}
+
+@mixin contactos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@mixin imgcontacto {
+    width: 5rem;
+}
+
+@mixin h3contacto {
+    background-color: orange;
+    box-shadow: 4px 4px 5px black;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: medium;
+}
+
+@mixin h3a {
+    text-decoration: none;
+    color: black;
+}
+
+// mixin para contacto formato pc 
+@mixin contactospc {
+    margin-left: 5rem;
+    padding: 1rem;
+    width: 25rem;
+}
+
+@mixin contactosright {
+    margin-right: 5rem;
+    padding: 1rem;
+    width: 25rem;
+}
+
+@mixin contatoimgpc {
+    width: 5rem;
+    animation-name: imgUno;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+// mixin para ubicacion formato mobile
+
+@mixin mainubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+@mixin ubicacionp {
+    background-color: orange;
+    text-align: center;
+    width: 25rem;
+    padding: 1rem;
+    font-size: medium;
+    box-shadow: 4px 4px 5px black;
+}
